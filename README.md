@@ -58,7 +58,6 @@ Then, i created two users: **KeyManager** and  **KeyEncryption**. I provided the
  
 <img width="1626" height="120" alt="37" src="https://github.com/user-attachments/assets/762e99f7-2fd7-429e-8e6e-e0834b35ed04" />
 
----
 
 ### ✅ Step 2 – Create a KMS Key
 
@@ -74,7 +73,7 @@ In AWS KMS, I created a key where:
 
 Note: I copied the **Key ID** for later use
 
----
+
 
 ### ✅ Step 3 –  Launch an EC2 Instance nd SSH into the EC2 Instance
 
