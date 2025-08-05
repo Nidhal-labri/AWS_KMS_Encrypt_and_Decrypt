@@ -19,7 +19,8 @@ This project helped me understand how encryption workflows operate within AWS us
 ---
 ## 🗺️ Architecture Diagram
 
-<img width="3769" height="2100" alt="image" src="https://github.com/user-attachments/assets/aca484c2-145e-4d9e-a993-30a547db88bd" />
+<img width="1920" height="1080" alt="architecture" src="https://github.com/user-attachments/assets/0e8b7f59-a5e0-4f57-9109-c025ee941022" />
+
 
 ---
 ## 🧱 Key AWS Services Used
