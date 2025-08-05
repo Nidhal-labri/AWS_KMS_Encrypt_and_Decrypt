@@ -105,7 +105,7 @@ Then Provide the following: Access Key ID  | Secret Access Key | Region
 **Create a plaintext file:**
 
 ```bash
-echo "This is Nidhal's password." > secret.txt
+echo "Welcome to Nidhal's Lab" > secret.txt
 ```
 
 **Encrypt the file and View encrypted content:**
@@ -131,6 +131,7 @@ aws kms decrypt \
   --output text \
   --query Plaintext > decryptedsecret.txt
 ```
+<img width="1280" height="164" alt="image" src="https://github.com/user-attachments/assets/d54d2d5a-4c9a-4c6b-9a76-6ea94c15fc5d" />
 
 
 **Re-encrypt the file:**
@@ -142,6 +143,7 @@ aws kms encrypt \
   --output text \
   --query CiphertextBlob > newencryptedsecret.txt
 ```
+<img width="1885" height="281" alt="image_2025-08-04_15-41-41" src="https://github.com/user-attachments/assets/f9303f1a-c945-4054-b67a-2d3f48b97ce3" />
 
 **List all generated files:**
 
