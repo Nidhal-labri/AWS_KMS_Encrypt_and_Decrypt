@@ -84,7 +84,7 @@ After launching, i connect into the ec2 instance via SSH
 
 ```bash
 ssh -i MyKey.pem ec2-user@<EC2-PUBLIC-IP>
-
+```
 <img width="1535" height="371" alt="image" src="https://github.com/user-attachments/assets/1286d426-55ef-4698-a75e-a8f2ef079a05" />
 
 
