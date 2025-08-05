@@ -25,19 +25,19 @@ This project helped me understand how encryption workflows operate within AWS us
 ---
 ## 🧱 Key AWS Services Used
 
-- **AWS KMS** – Manages encryption keys to protect data.
-- **Amazon S3** – Stores objects with encryption and supports cross-region replication.
-- **Amazon EBS** – Provides encrypted block storage for EC2 instances.
+- **AWS KMS** – Manages encryption keys to securely encrypt, decrypt, and re-encrypt sensitive data.
+- **IAM** – Controls user access and permissions for managing and using KMS keys.
+- **Amazon EC2** – Hosts the compute instance where encryption operations are performed via CLI.
 - **Amazon AMI** – Enables creation of encrypted machine images for secure deployments.
-- **IAM** – Controls access to encryption keys and resources.
-- **CloudWatch Logs** – (Optional) Monitors and logs encryption-related activity.
+- **AWS CLI** – Enables command-line interaction with AWS services to execute KMS operations.
+- **AWS CloudTrail** – (Implicit) Logs KMS API calls for auditing and compliance tracking.
 
 ---
 ## 🛠️ Deployment Steps
 
 ### ✅ Step 1 –Create a Users and User Group
 
-In IAM i create a group named `KMSGroup` and attache to it th following policy that i gave it the name KMS_Policy
+In IAM i created a group named `KMSGroup` and attached to it the following policy that i gave it the name KMS_Policy
 
 ````
 {
@@ -53,7 +53,7 @@ In IAM i create a group named `KMSGroup` and attache to it th following policy t
 }
 ````
 
-Then, i created two users: **KeyManager** and  **KeyEncryption**. I provided them with **AWS Management Console** before adding them to `KMSGroup`
+Then, i created two users: **KeyManager** and  **KeyEncryption**.I granted both users **AWS Management Console** access before adding them to `KMSGroup`
 
  For KeyEncryption user  i created an  **Access key** for CLI use and downloaded the `.csv` file the need in later configuration
  
@@ -71,16 +71,14 @@ In AWS KMS, I created a key where:
 
 <img width="1919" height="429" alt="39" src="https://github.com/user-attachments/assets/764b9549-59ea-43f2-9bb7-65a0c1f0b908" />
 
-
-Note: I copied the **Key ID** for later use
-
+Note: I saved the generated Key ID for later CLI operations.
 
 
-### ✅ Step 3 –  Launch an EC2 Instance nd SSH into the EC2 Instance
+### ✅ Step 3 –  Launch an EC2 Instance and SSH into the EC2 Instance
 
 I launched a t2.micro instance with the name `MyEC2Server` and Amazon Linux as an OS. For the key pair, I Created a one named `MyKey` (type: RSA, format: `.pem`).
 
-After launching, i connect into the ec2 instance via SSH
+After launching, i connected into the ec2 instance via SSH
 
 ```bash
 ssh -i MyKey.pem ec2-user@<EC2-PUBLIC-IP>
