@@ -1,6 +1,6 @@
 # 🔐 AWS Project: Encrypting and Decrypting Data using AWS KMS 
 
-This project demonstrates how to use **AWS Key Management Service (KMS)** to securely encrypt, decrypt, and re-encrypt sensitive data. AWS KMS is a fully managed service that simplifies key creation and control, essential for protecting data at rest in modern cloud environments. Through this hands-on practice, I learned how to manage IAM users and permissions, configure CLI access, launch an EC2 instance, and perform KMS operations directly from the command line.
+This project demonstrates how to use **AWS Key Management Service (KMS)** to securely encrypt, decrypt, and re-encrypt sensitive data. AWS KMS is a fully managed service that simplifies key creation and control, essential for protecting data at rest in modern cloud environments. 
 
 ---
 
